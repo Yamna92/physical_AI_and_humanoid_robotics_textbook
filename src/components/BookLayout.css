@@ -1,0 +1,49 @@
+.book-layout {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - var(--ifm-navbar-height));
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.book-content {
+  flex: 3;
+  padding: 2rem;
+  overflow-y: auto;
+  border-right: 1px solid #e0e0e0;
+}
+
+.chatbot-sidebar {
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .book-layout {
+    flex-direction: column;
+  }
+  
+  .book-content {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .chatbot-sidebar {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Adjustments for Docusaurus theme */
+.book-layout .markdown {
+  max-width: 100%;
+}
+
+.book-layout .pagination-nav {
+  margin-top: 2rem;
+}
